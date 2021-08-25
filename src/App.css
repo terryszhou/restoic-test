@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: rgb(241,241,243);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    width: 300px;
+    box-shadow: 1px 1px 1px rgb(230,230,231);
+    text-align: left;
+    padding-top: 50px;
+    font-weight: bold;
+    transition-duration: 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#sidebar-heading, #sidebar-subheading {
+    margin-left: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar-list {
+    list-style-type: none;
+    text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-list li {
+    display: flex;
+    margin-top: 40px;
+}
+
+.sidebar-list i {
+    margin-right: 20px;
+}
+
+hr {
+    width: 300px;
+}
+
+#sidebar-footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+#home-heading {
+    position: absolute;
+    left: 350px;
+    top: 60px;
+    font-weight: bold;
+}
+
+#team-box {
+    position: relative;
+    border-radius: 5px;
+    left: 350px;
+    top: 140px;
+    background-color: white;
+    width: 70%;
+    overflow: scroll;
+}
+
+#team-heading {
+    font-weight: bold;
+    padding: 30px;
+}
+
+#team-invite-button {
+    position: absolute;
+    right: 3.5%;
+    top: 5%;
+    background-color: rgb(230,60,43);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    float: right;
+    padding: 5px;
+}
+
+.team-line {
+    width: 93%;
+}
+
+#team-list {
+    list-style-type: none;
+    text-align: left;
+}
+
+.team-list-item {
+    display: flex;
+}
+
+.team-list-item p {
+    margin: 0px;
+}
+
+.team-list-item i {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(182,182,182);
+    color: white;
+    margin-right: 30px;
+}
+
+.email {
+    font-weight: bold;
+}
+
+.info {
+    color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar, .sidebar hr {
+        width: 100px;
+        transition-duration: 0.2s;
+    }
+
+    #sidebar-heading, #sidebar-subheading {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .sidebar li p {
+        display: none;
+    }
+
+    #home-heading {
+        left: 130px;
+    }
+
+    #team-box {
+        left: 120px;
+        top: 140px;
+    }
 }
